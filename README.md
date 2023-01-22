@@ -42,6 +42,8 @@ Requires Jo Engine to build. Checkout source code folder to your Jo Engine "Proj
 Thank you to Reyeme for the disasteroid generation algorithm, advice   
 Thank you to EmeraldNova and KnightOfDragon for basic geometry refresher, advice   
 Lots of advice and feedback from the #segaxtreme Discord (Fafling, Ndiddy, Ponut, and more)   
+Tutorial I got ideas from: [Code Asteroids in JavaScript (1979 Atari game) - tutorial](https://www.youtube.com/watch?v=H9CSWMxJx84
+)   
 Title Song: [Powerup!](https://www.youtube.com/watch?v=l7SwiFWOQqM) by Jeremy Blake. No Copyright.  
 Game Over Song: [Dub Hub](https://www.youtube.com/watch?v=in8hEbX9mM8) by Jimmy Fontanez. No Copyright.  
 Thank you to [Emerald Nova](www.emeraldnova.com) for organizing the Saturn Dev contest  
