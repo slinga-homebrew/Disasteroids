@@ -71,7 +71,6 @@ void drawLetter(char letter, int color, int x, int y, int xScale, int yScale)
 
     jo_3d_push_matrix();
     {
-        jo_3d_camera_look_at(&g_Game.camera);
         my_jo_3d_set_mesh_color_ex(mesh, color, true);
         jo_3d_translate_matrix(x, y, 0);
         jo_3d_set_scale(xScale, yScale, 1);
