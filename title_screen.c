@@ -290,7 +290,6 @@ static void drawTitleRectangle(void)
 
     jo_3d_push_matrix();
     {
-        jo_3d_camera_look_at(&g_Game.camera);
         jo_3d_set_mesh_color(mesh, JO_COLOR_Black);
         jo_3d_translate_matrix(xPos, yPos, 0);
         jo_3d_mesh_draw(mesh);
@@ -447,7 +446,6 @@ static void drawMenuCursor(void)
 
     jo_3d_push_matrix();
     {
-        jo_3d_camera_look_at(&g_Game.camera);
         jo_3d_set_mesh_color(mesh, color);
         jo_3d_translate_matrix(xPos, yPos, 0);
         jo_3d_rotate_matrix(0, 0, ang);

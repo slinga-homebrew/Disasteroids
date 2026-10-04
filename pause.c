@@ -344,7 +344,6 @@ static void drawPauseLines(void)
     xPos = 63;
     jo_3d_push_matrix();
     {
-        jo_3d_camera_look_at(&g_Game.camera);
         jo_3d_set_mesh_color(mesh, g_Game.hudColor);
         jo_3d_translate_matrix(xPos, yPos, 0);
     }
@@ -356,7 +355,6 @@ static void drawPauseLines(void)
     yPos = -86;
     jo_3d_push_matrix();
     {
-        jo_3d_camera_look_at(&g_Game.camera);
         jo_3d_set_mesh_color(mesh, g_Game.hudColor);
         jo_3d_translate_matrix(xPos, yPos, 0);
         jo_3d_mesh_draw(mesh);
@@ -369,7 +367,6 @@ static void drawPauseScoreShip(jo_3d_mesh* mesh, int xPos, int yPos, int color)
 {
     jo_3d_push_matrix();
     {
-        jo_3d_camera_look_at(&g_Game.camera);
         jo_3d_set_mesh_color(mesh, color); // todo
         jo_3d_translate_matrix(xPos + 12, yPos - 2, 0);
         jo_3d_rotate_matrix(0, 0, 90);
@@ -582,7 +579,6 @@ static void drawPauseMenuCursor(void)
 
     jo_3d_push_matrix();
     {
-        jo_3d_camera_look_at(&g_Game.camera);
         jo_3d_set_mesh_color(mesh, color);
         jo_3d_translate_matrix(xPos, yPos, 0);
         jo_3d_rotate_matrix(0, 0, 90);

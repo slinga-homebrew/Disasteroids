@@ -47,6 +47,7 @@ void abcStart_callback(void);
 void changeHud_input(void);
 void debug_input(void);
 void debug_draw(void);
+void frameBegin_callback(void);
 
 // sets up callback and starts game loop
 void jo_main(void)
@@ -63,6 +64,8 @@ void jo_main(void)
     //
     // game callbacks
     //
+
+    jo_core_add_callback(frameBegin_callback);
 
     jo_core_add_callback(ssmtfLogo_input);
     jo_core_add_callback(ssmtfLogo_update);
@@ -88,13 +91,12 @@ void jo_main(void)
     // ABC + start handler
     jo_core_set_restart_game_callback(abcStart_callback);
 
+
     //
     // initialize globals
     //
 
     jo_3d_camera_init(&g_Game.camera);
-    jo_3d_camera_look_at(&g_Game.camera);
-
     g_Game.hudColor = JO_COLOR_Green;
 
     // transition to first game state
@@ -145,6 +147,13 @@ void changeHud_input(void)
     {
         g_Game.input.pressedY = false;
     }
+}
+
+// performance fix, call jo_3d_camera only once per frame
+// previously this was called on every polygon
+void frameBegin_callback(void)
+{
+    jo_3d_camera_look_at(&g_Game.camera);
 }
 
 // check if player 1 pressed Z to change the debug level
