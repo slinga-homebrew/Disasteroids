@@ -63,7 +63,6 @@ void drawExplosions(void)
 
         jo_3d_push_matrix();
         {
-            jo_3d_camera_look_at(&g_Game.camera);
             jo_3d_set_mesh_color(mesh, g_Game.hudColor);
             jo_3d_translate_matrix_fixed(explosion->curPos.x, explosion->curPos.y, 0);
             jo_3d_mesh_draw(mesh);
@@ -172,7 +171,6 @@ void drawShipDebris(void)
 
         jo_3d_push_matrix();
         {
-            jo_3d_camera_look_at(&g_Game.camera);
             jo_3d_set_mesh_color(mesh, debris->color);
             jo_3d_translate_matrix_fixed(debris->curPos.x, debris->curPos.y, 0);
             jo_3d_rotate_matrix(0, 0, debris->curPos.rot);

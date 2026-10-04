@@ -39,7 +39,6 @@ void drawDisasteroids(void)
 
         jo_3d_push_matrix();
         {
-            jo_3d_camera_look_at(&g_Game.camera);
             jo_3d_set_mesh_color(mesh, g_Game.hudColor);
             jo_3d_translate_matrix_fixed(disasteroid->curPos.x, disasteroid->curPos.y, 0);
             jo_3d_mesh_draw(mesh);
@@ -244,7 +243,6 @@ void drawTitleScreenDisasteroids(void)
 
         jo_3d_push_matrix();
         {
-            jo_3d_camera_look_at(&g_Game.camera);
             jo_3d_set_mesh_color(mesh, color);
             jo_3d_translate_matrix_fixed(disasteroid->curPos.x, disasteroid->curPos.y, 0);
             jo_3d_mesh_draw(mesh);

@@ -110,7 +110,6 @@ void drawTitleScreenShips(void)
 
         jo_3d_push_matrix();
         {
-            jo_3d_camera_look_at(&g_Game.camera);
             jo_3d_set_mesh_color(mesh, color);
             jo_3d_translate_matrix(xPos, yPos, 0);
             jo_3d_rotate_matrix(0, 0, rot);
@@ -211,7 +210,6 @@ void drawPlayers(void)
 
         jo_3d_push_matrix();
         {
-            jo_3d_camera_look_at(&g_Game.camera);
             jo_3d_set_mesh_color(mesh, player->color);
             //jo_3d_set_scale(2, 2, 1);
             jo_3d_translate_matrix_fixed(player->curPos.x, player->curPos.y, 0);
@@ -227,7 +225,6 @@ void drawPlayers(void)
 
             jo_3d_push_matrix();
             {
-                jo_3d_camera_look_at(&g_Game.camera);
                 jo_3d_set_mesh_color(mesh, player->color);
                 jo_3d_translate_matrix_fixed(player->curPos.x, player->curPos.y, 0);
                 jo_3d_rotate_matrix(0, 0, player->curPos.rot);

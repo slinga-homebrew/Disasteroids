@@ -96,7 +96,6 @@ void drawStars(void)
 
         jo_3d_push_matrix();
         {
-            jo_3d_camera_look_at(&g_Game.camera);
             jo_3d_set_mesh_color(mesh, color);
             jo_3d_translate_matrix_fixed(star->curPos.x, star->curPos.y, 0);
             jo_3d_mesh_draw(mesh);
